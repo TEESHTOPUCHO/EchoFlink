@@ -8,6 +8,8 @@
   <!-- Voice encryption via WebRTC (DTLS‑SRTP), signaling via PeerJS -->
 <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.1/dist/peerjs.min.js"></script>
   <style>
+    
+    <link rel="stylesheet" href="css/mobile.css">
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -884,5 +886,6 @@
   window.addEventListener('load', () => { const hash=window.location.hash.substring(1); const p=new URLSearchParams(hash); const host=p.get('host'),room=p.get('room'); if(host) initClient(host,room||'joined'); });
 })();
 </script>
+    <script src="js/mobile.js"></script>
 </body>
 </html>
