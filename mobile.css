@@ -1,0 +1,138 @@
+/* ========== MOBILE STYLES ========== */
+@media screen and (max-width: 768px) {
+  
+  /* Απόκρυψη sidebar και right panel από προεπιλογή */
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 260px;
+    height: calc(100vh - 52px);
+    z-index: 300;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.3);
+  }
+  
+  .right-panel {
+    display: none;
+    position: fixed;
+    top: 52px;
+    right: 0;
+    width: 260px;
+    height: calc(100vh - 52px);
+    z-index: 300;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  }
+  
+  /* Όταν είναι ανοιχτά */
+  .sidebar.mobile-open,
+  .right-panel.mobile-open {
+    display: flex;
+  }
+  
+  /* Το chat πιάνει όλη την οθόνη */
+  .main-panel {
+    width: 100%;
+  }
+  
+  /* Μικρότερα κουμπιά στην topbar */
+  .topbar {
+    padding: 0 0.5rem;
+    gap: 0.3rem;
+  }
+  
+  .topbar .btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .room-title {
+    font-size: 0.85rem;
+  }
+  
+  /* Input area */
+  .input-area {
+    padding: 0.3rem 0.5rem;
+    gap: 0.2rem;
+  }
+  
+  .input-area input {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+  
+  .input-area .btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Emoji cloud μικρότερο */
+  .emoji-cloud {
+    width: 180px;
+    bottom: 50px;
+    left: 10px;
+  }
+  
+  .emoji-cloud span {
+    font-size: 1rem;
+  }
+  
+  /* DM modal μικρότερο */
+  .dm-modal {
+    width: 280px;
+    right: 5px;
+    bottom: 10px;
+  }
+  
+  /* Modals */
+  .create-room-modal,
+  #nameModal,
+  #settingsModal {
+    width: 90%;
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+  
+  /* Users list */
+  .user-item {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.3rem;
+  }
+  
+  /* Search box */
+  .search-box input {
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile buttons */
+  .mobile-sidebar-btn,
+  .mobile-users-btn {
+    display: inline-flex !important;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  /* Overlay όταν ανοίγει sidebar/panel */
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 52px);
+    background: rgba(0,0,0,0.4);
+    z-index: 200;
+  }
+  
+  .mobile-overlay.active {
+    display: block;
+  }
+  
+  /* Απόκρυψη desktop-only κουμπιών */
+  .desktop-only {
+    display: none;
+  }
+}
